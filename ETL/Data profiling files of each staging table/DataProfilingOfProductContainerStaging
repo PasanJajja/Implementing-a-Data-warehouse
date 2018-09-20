@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{24F868EE-CFC0-4B80-BA5E-C40AC91A2544}" Name="DataProfilingOfCustomerLocationStaging">
+      <DtsConnectionManagerID>DataProfilingOfCustomerLocationStaging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{E5D2DA43-FF21-46A1-BC55-8E2990DDDCE8}" Name="DataProfilingOfCustomerStaging">
+      <DtsConnectionManagerID>DataProfilingOfCustomerStaging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8CC71529-122A-4AF6-8926-E331643EF697}" Name="DataProfilingOfProductCategoryStaging">
+      <DtsConnectionManagerID>DataProfilingOfProductCategoryStaging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{91F199A5-5CA1-41ED-A86D-F5A3B4DB0E63}" Name="DataProfilingOfProductContainerStaging">
+      <DtsConnectionManagerID>DataProfilingOfProductContainerStaging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{1AC97F62-835D-4673-8BBA-2AC7534241B1}" Name="DataProfilingOfProductStaging">
+      <DtsConnectionManagerID>DataProfilingOfProductStaging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{436D0475-83AA-4674-B84F-5EBF7A0A786C}" Name="DataProfilingOfProductStaging 1">
+      <DtsConnectionManagerID>DataProfilingOfProductStaging 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{EEADD3DC-D0B8-42E9-B19E-B6A5A3CD7C89}" Name="DataProfilingOfProductSubCategoryStaging">
+      <DtsConnectionManagerID>DataProfilingOfProductSubCategoryStaging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9C140AFD-896E-4B8C-A9EE-E158F03A763E}" Name="DataProfilingOfSalesStaging">
+      <DtsConnectionManagerID>DataProfilingOfSalesStaging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{5778028A-FFDD-4A82-A3BB-08E3B5538347}" Name="DESKTOP-CVBEO65.MySourceDB_DW">
+      <DtsConnectionManagerID>DESKTOP-CVBEO65.MySourceDB_DW</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table Schema="dbo" Table="ProductContainerStaging" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table Schema="dbo" Table="ProductContainerStaging" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table Schema="dbo" Table="ProductContainerStaging" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table Schema="dbo" Table="ProductContainerStaging" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table Schema="dbo" Table="ProductContainerStaging" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table Schema="dbo" Table="ProductContainerStaging" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <FunctionalDependencyProfileRequest ID="FDReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table Schema="dbo" Table="ProductContainerStaging" />
+        <DeterminantColumns>
+          <Column IsWildCard="true" />
+        </DeterminantColumns>
+        <DependentColumn IsWildCard="true" />
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <FDStrengthThreshold>0.95</FDStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </FunctionalDependencyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductContainerID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductContainerName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductContainerID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>57</MinValue>
+        <MaxValue>9482</MaxValue>
+        <Mean>4769.5</Mean>
+        <StdDev>2721.051803378</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>248</MinValue>
+        <MaxValue>9673</MaxValue>
+        <Mean>4960.5</Mean>
+        <StdDev>2721.051803378</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductContainerName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>8</MinLength>
+        <MaxLength>10</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>5934</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>2180</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>1312</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <KeyColumns>
+          <Column Name="ProductContainerID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductContainerID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>9426</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductContainerName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Small Pack</Value>
+            <Count>1067</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Small Box</Value>
+            <Count>4887</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Medium Box</Value>
+            <Count>410</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Jumbo Box</Value>
+            <Count>590</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wrap Bag</Value>
+            <Count>1312</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Large Box</Value>
+            <Count>457</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Jumbo Drum</Value>
+            <Count>703</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <KeyColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>9426</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <Column Name="ProductContainerName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>SMALL BOX</RegexText>
+            <Frequency>52</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SMALL PACK</RegexText>
+            <Frequency>11</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>WRAP BAG</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>JUMBO \p{L}+</RegexText>
+            <Frequency>14</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ BOX</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <DeterminantColumns>
+          <Column Name="ProductContainerID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <DeterminantColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ProductContainerName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <DeterminantColumns>
+          <Column Name="ProductContainerID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ProductContainerName" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+      <FunctionalDependencyProfile IsExact="true" ProfileRequestID="">
+        <DataSourceID>{5778028A-FFDD-4A82-A3BB-08E3B5538347}</DataSourceID>
+        <Table DataSource="DESKTOP-CVBEO65" Database="MySourceDB_DW" Schema="dbo" Table="ProductContainerStaging" RowCount="9426" />
+        <DeterminantColumns>
+          <Column Name="ProductCategoryID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </DeterminantColumns>
+        <DependentColumn Name="ProductContainerID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IsExactFD>true</IsExactFD>
+      </FunctionalDependencyProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
